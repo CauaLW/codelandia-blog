@@ -52,6 +52,8 @@ body {
     "content";
 
     background-color: var(--content-background);
+
+    min-height: 100vh;
 }
 
 #header {
@@ -153,6 +155,7 @@ body {
     align-items: center;
 
     margin-bottom: 10px;
+    margin-top: auto;
 
     font-family: 'Inter-Medium';
     font-size: 1em;

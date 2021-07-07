@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    
+    <title>Codelândia Blog</title>
+</head>
+<body>
+    <header id="header">
+        <div id="headerTitles">
+            <a href="#"><p>Codelândia blog</p></a>
+            <a id="addNotice" href="#"><p>Adicionar</p></a>
+        </div>
+
+        <input type="text" name="searchBar" id="searchBar" placeholder="Pesquisar no blog">
+    </header>
+
+    <main id="content">
+        
+    </main>
+
+    <div id="modal">
+        <div class="content">
+            <p class="modalTitle">Adiconar Notícia</p>
+            <form action="" class="form">
+                <label for="title">Título:</label>
+                <input required type="text" name="title" id="title" placeholder="Digite o título">
+    
+                <label for="resume">Resumo:</label>
+                <input required type="text" name="resume" id="resume" placeholder="Digite o resumo">
+    
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

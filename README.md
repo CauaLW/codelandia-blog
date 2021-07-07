@@ -42,6 +42,8 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - Vá até o repositório: `cd codelandia-blog`
 - Abra o arquivo `index.html`
 
+- Você pode acessar online <a href="https://codelandia-blog.vercel.app/" target="_blank">aqui</a>
+
 ## :closed_book: Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](https://github.com/CauaLW/codelandia-blog/blob/master/LICENSE) para mais detalhes.

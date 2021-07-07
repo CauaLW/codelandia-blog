@@ -1,0 +1,224 @@
+:root {
+    --blue: #3EA1DB;
+    --blue-dark: #574AE8;
+    --white: #FFF;
+    --content-background: #f3f5f7;
+  
+    --title: #313131;
+    --text: #B6B6B6;
+    
+    --linear: linear-gradient(90deg, #574AE8 0%, #3EA1DB 100%);
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: #F3F5F5;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #574AE8;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 0.375rem rgba(0, 0, 0, 0.3);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+@font-face {
+    font-family: 'Inter-Medium';
+    src: url('../fonts/Inter-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Inter-Regular';
+    src: url('../fonts/Inter-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'LexendDeca-Regular';
+    src: url('../fonts/LexendDeca-Regular.ttf')
+}
+
+body {
+    display: grid;
+    grid-template-rows: 20vh auto;
+    grid-template-areas: 
+    "header"
+    "content";
+
+    background-color: var(--content-background);
+}
+
+#header {
+    grid-area: header;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+
+    background: var(--linear);
+}
+
+#headerTitles {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+}
+
+#headerTitles a {
+    color: var(--white);
+    font-family: 'Inter-Regular';
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+#searchBar {
+    width: 70%;
+    height: 30%;
+    padding: 0 35px;
+    border-radius: 5px;
+    border: none;
+
+    font-size: 1em;
+    font-family: 'Inter-Regular';
+    color: var(--text);
+
+    background: rgba(255, 255, 255, 0.2);
+    background-image: url('../assets/searchIcon.png');
+    background-repeat: no-repeat;
+    background-position: 10px 11px;
+    outline: 0;
+}
+
+#searchBar::placeholder {
+    color: var(--text);
+}
+
+#content {
+    grid-area: content;
+    
+    width: 70%;
+
+    margin: 0 auto 0 auto;
+}
+
+.card {
+    margin: 25px 25px;
+    padding: 20px;
+    
+    background-color: var(--white);
+    
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+.card .header {
+    font-family: 'LexendDeca-Regular';
+    color: var(--text);
+    font-size: 0.9em;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+.card .title {
+    font-family: 'Inter-Medium';
+    color: var(--title);
+    font-weight: normal;
+
+    margin-bottom: 7px;
+}
+
+.card .resume {
+    font-family: 'Inter-Regular';
+    color: var(--text);
+}
+
+.card .favoriteButton {
+    cursor: pointer;
+}
+
+#modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+#modal .content {
+    background-color: var(--content-background);
+    margin: 15% auto; 
+    padding: 20px;
+    border-radius: 5px;
+    width: 70%; 
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: 'LexendDeca-Regular';
+    color: var(--title);
+}
+
+#modal .content .modalTitle {
+    font-size: 1.2em;
+}
+
+#modal .content form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    width: 70%;
+}
+
+#modal .content input {
+    height: 25px;
+    margin: 5px 0;
+
+    font-family: 'Inter-Regular';
+    color: var(--title);
+    font-size: 0.9em;
+
+    outline: 0;
+}
+
+#modal .content input::placeholder {
+    color: var(--title);
+}
+
+#modal .content button {
+    height: 35px;
+    border-radius: 5px;
+    border: none;
+    background: var(--linear);
+    margin-top: 15px;
+    color: var(--white);
+    font-size: 0.9em;
+    font-family: 'LexendDeca-Regular';
+    cursor: pointer;
+}
+
+#modal .content button:hover {
+    height: 40px;
+}
+
+@media (max-width: 650px) {
+    #content {
+        width: 90%;        
+    }
+}

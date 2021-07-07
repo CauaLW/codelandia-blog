@@ -147,6 +147,26 @@ body {
     cursor: pointer;
 }
 
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-bottom: 10px;
+
+    font-family: 'Inter-Medium';
+    font-size: 1em;
+    color: var(--title);
+}
+
+.footer a {
+    margin: 0 5px;
+}
+
+.footer img {
+    height: 30px;
+}
+
 #modal {
     display: none; 
     position: fixed;
@@ -220,5 +240,9 @@ body {
 @media (max-width: 650px) {
     #content {
         width: 90%;        
+    }
+
+    .footer a {
+        margin: 0 1px;
     }
 }

@@ -56,6 +56,7 @@ const getFullMonth = (month) => {
     const months = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez']
     return months[month]
 }
+
 const addNotice = () => {
     event.preventDefault()
 
@@ -124,7 +125,7 @@ const renderNotices = (filteredNotices) => {
         return ''
     }
 
-    const notices = JSON.parse(localStorage.getItem('notices'))
+    const notices = JSON.parse(localStorage.getItem('notices')) || []
     
     notices.forEach(notice => {
         const noticeCard = generateCard(notice.date, notice.title, notice.resume)
